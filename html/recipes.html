@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brainrot Recipes</title>
+  <link rel="stylesheet" href="../css/recipes.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar Buttons (fixed & centered) -->
+  <aside class="sidebar">
+    <button class="back" onclick="window.location.href='../index.html'">
+      ← Back to Main
+    </button>
+
+    <button class="uncommon" onclick="scrollToRarity('uncommon')">Uncommon</button>
+    <button class="common" onclick="scrollToRarity('common')">Common</button>
+    <button class="rare" onclick="scrollToRarity('rare')">Rare</button>
+    <button class="epic" onclick="scrollToRarity('epic')">Epic</button>
+    <button class="legendary" onclick="scrollToRarity('legendary')">Legendary</button>
+    <button class="mythic" onclick="scrollToRarity('mythic')">Mythic</button>
+    <button class="secret" onclick="scrollToRarity('secret')">Secret</button>
+  </aside>
+
+  <!-- Main content -->
+  <main>
+    <section id="uncommon">
+      <h2>Uncommon</h2>
+      <div class="grid" id="grid-uncommon"></div>
+    </section>
+
+    <section id="common">
+      <h2>Common</h2>
+      <div class="grid" id="grid-common"></div>
+    </section>
+
+    <section id="rare">
+      <h2>Rare</h2>
+      <div class="grid" id="grid-rare"></div>
+    </section>
+
+    <section id="epic">
+      <h2>Epic</h2>
+      <div class="grid" id="grid-epic"></div>
+    </section>
+
+    <section id="legendary">
+      <h2>Legendary</h2>
+      <div class="grid" id="grid-legendary"></div>
+    </section>
+
+    <section id="mythic">
+      <h2>Mythic</h2>
+      <div class="grid" id="grid-mythic"></div>
+    </section>
+
+    <section id="secret">
+      <h2>Secret</h2>
+      <div class="grid" id="grid-secret"></div>
+    </section>
+  </main>
+
+</div>
+
+<!-- JS -->
+<script src="../js/recipes.js"></script>
+<script>
+function scrollToRarity(rarity) {
+  const section = document.getElementById(rarity);
+  if(section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+</script>
+
+</body>
+</html>
