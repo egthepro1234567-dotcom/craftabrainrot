@@ -1,54 +1,256 @@
-const brainrots = [];
+const brainrots = [
 
-// Helper to make 3-digit IDs
-const formatId = i => String(i).padStart(3,"0");
+/* ===== UNCOMMON (001–009) ===== */
+{ id: 1, order: 1, rarity: "uncommon", image: "../images/recipes/brainrot001.png" },
+{ id: 2, order: 2, rarity: "uncommon", image: "../images/recipes/brainrot002.png" },
+{ id: 3, order: 3, rarity: "uncommon", image: "../images/recipes/brainrot003.png" },
+{ id: 4, order: 4, rarity: "uncommon", image: "../images/recipes/brainrot004.png" },
+{ id: 5, order: 5, rarity: "uncommon", image: "../images/recipes/brainrot005.png" },
+{ id: 6, order: 6, rarity: "uncommon", image: "../images/recipes/brainrot006.png" },
+{ id: 7, order: 7, rarity: "uncommon", image: "../images/recipes/brainrot007.png" },
+{ id: 8, order: 8, rarity: "uncommon", image: "../images/recipes/brainrot008.png" },
+{ id: 9, order: 9, rarity: "uncommon", image: "../images/recipes/brainrot009.png" },
 
-// Uncommon: 001-008
-for(let i=1;i<=8;i++){
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"uncommon",image:`../images/recipes/brainrot${formatId(i)}.png`});
-}
-// Common: 009-047
-for(let i=9;i<=47;i++){
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"common",image:`../images/recipes/brainrot${formatId(i)}.png`});
-}
-// Rare: 048-095
-for(let i=48;i<=95;i++){
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"rare",image:`../images/recipes/brainrot${formatId(i)}.png`});
-}
-// Epic: 096-142
-for(let i=96;i<=142;i++){
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"epic",image:`../images/recipes/brainrot${formatId(i)}.png`});
-}
-// Legendary: 143-181
-for(let i=143;i<=181;i++){
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"legendary",image:`../images/recipes/brainrot${formatId(i)}.png`});
-}
-// Mythic: 182-205 (skip 199)
-for(let i=182;i<=205;i++){
-  if(i===199) continue; // skip 199 here
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"mythic",image:`../images/recipes/brainrot${formatId(i)}.png`});
-}
-// Secret: 199, 206-208
-[199,206,207,208].forEach(i=>{
-  brainrots.push({id:i,name:`Brainrot ${formatId(i)}`,rarity:"secret",image:`../images/recipes/brainrot${formatId(i)}.png`});
-});
+/* ===== COMMON (010–047) ===== */
+{ id: 10, order: 1, rarity: "common", image: "../images/recipes/brainrot010.png" },
+{ id: 11, order: 2, rarity: "common", image: "../images/recipes/brainrot011.png" },
+{ id: 12, order: 3, rarity: "common", image: "../images/recipes/brainrot012.png" },
+{ id: 13, order: 4, rarity: "common", image: "../images/recipes/brainrot013.png" },
+{ id: 14, order: 5, rarity: "common", image: "../images/recipes/brainrot014.png" },
+{ id: 15, order: 6, rarity: "common", image: "../images/recipes/brainrot015.png" },
+{ id: 16, order: 7, rarity: "common", image: "../images/recipes/brainrot016.png" },
+{ id: 17, order: 8, rarity: "common", image: "../images/recipes/brainrot017.png" },
+{ id: 18, order: 9, rarity: "common", image: "../images/recipes/brainrot018.png" },
+{ id: 19, order: 10, rarity: "common", image: "../images/recipes/brainrot019.png" },
+{ id: 20, order: 11, rarity: "common", image: "../images/recipes/brainrot020.png" },
+{ id: 21, order: 12, rarity: "common", image: "../images/recipes/brainrot021.png" },
+{ id: 22, order: 13, rarity: "common", image: "../images/recipes/brainrot022.png" },
+{ id: 23, order: 14, rarity: "common", image: "../images/recipes/brainrot023.png" },
+{ id: 24, order: 15, rarity: "common", image: "../images/recipes/brainrot024.png" },
+{ id: 25, order: 16, rarity: "common", image: "../images/recipes/brainrot025.png" },
+{ id: 26, order: 17, rarity: "common", image: "../images/recipes/brainrot026.png" },
+{ id: 27, order: 18, rarity: "common", image: "../images/recipes/brainrot027.png" },
+{ id: 28, order: 19, rarity: "common", image: "../images/recipes/brainrot028.png" },
+{ id: 29, order: 20, rarity: "common", image: "../images/recipes/brainrot029.png" },
+{ id: 30, order: 21, rarity: "common", image: "../images/recipes/brainrot030.png" },
+{ id: 31, order: 22, rarity: "common", image: "../images/recipes/brainrot031.png" },
+{ id: 32, order: 23, rarity: "common", image: "../images/recipes/brainrot032.png" },
+{ id: 33, order: 24, rarity: "common", image: "../images/recipes/brainrot033.png" },
+{ id: 34, order: 25, rarity: "common", image: "../images/recipes/brainrot034.png" },
+{ id: 209, order: 26, rarity: "common", image: "../images/recipes/brainrot209.png" },
+{ id: 35, order: 27, rarity: "common", image: "../images/recipes/brainrot035.png" },
+{ id: 36, order: 28, rarity: "common", image: "../images/recipes/brainrot036.png" },
+{ id: 37, order: 29, rarity: "common", image: "../images/recipes/brainrot037.png" },
+{ id: 38, order: 30, rarity: "common", image: "../images/recipes/brainrot038.png" },
+{ id: 210, order: 31, rarity: "common", image: "../images/recipes/brainrot210.png" },
+{ id: 39, order: 32, rarity: "common", image: "../images/recipes/brainrot039.png" },
+{ id: 40, order: 33, rarity: "common", image: "../images/recipes/brainrot040.png" },
+{ id: 41, order: 34, rarity: "common", image: "../images/recipes/brainrot041.png" },
+{ id: 42, order: 35, rarity: "common", image: "../images/recipes/brainrot042.png" },
+{ id: 43, order: 36, rarity: "common", image: "../images/recipes/brainrot043.png" },
+{ id: 44, order: 37, rarity: "common", image: "../images/recipes/brainrot044.png" },
+{ id: 45, order: 38, rarity: "common", image: "../images/recipes/brainrot045.png" },
+{ id: 46, order: 39, rarity: "common", image: "../images/recipes/brainrot046.png" },
+{ id: 47, order: 40, rarity: "common", image: "../images/recipes/brainrot047.png" },
 
-// Populate the grids
-brainrots.forEach(r=>{
+/* ===== RARE (048–096) ===== */
+{ id: 48, order: 1, rarity: "rare", image: "../images/recipes/brainrot048.png" },
+{ id: 49, order: 2, rarity: "rare", image: "../images/recipes/brainrot049.png" },
+{ id: 50, order: 3, rarity: "rare", image: "../images/recipes/brainrot050.png" },
+{ id: 51, order: 4, rarity: "rare", image: "../images/recipes/brainrot051.png" },
+{ id: 52, order: 5, rarity: "rare", image: "../images/recipes/brainrot052.png" },
+{ id: 211, order: 6, rarity: "rare", image: "../images/recipes/brainrot211.png" },
+{ id: 53, order: 7, rarity: "rare", image: "../images/recipes/brainrot053.png" },
+{ id: 54, order: 8, rarity: "rare", image: "../images/recipes/brainrot054.png" },
+{ id: 55, order: 9, rarity: "rare", image: "../images/recipes/brainrot055.png" },
+{ id: 56, order: 10, rarity: "rare", image: "../images/recipes/brainrot056.png" },
+{ id: 57, order: 11, rarity: "rare", image: "../images/recipes/brainrot057.png" },
+{ id: 58, order: 12, rarity: "rare", image: "../images/recipes/brainrot058.png" },
+{ id: 59, order: 13, rarity: "rare", image: "../images/recipes/brainrot059.png" },
+{ id: 60, order: 14, rarity: "rare", image: "../images/recipes/brainrot060.png" },
+{ id: 61, order: 15, rarity: "rare", image: "../images/recipes/brainrot061.png" },
+{ id: 62, order: 16, rarity: "rare", image: "../images/recipes/brainrot062.png" },
+{ id: 63, order: 17, rarity: "rare", image: "../images/recipes/brainrot063.png" },
+{ id: 64, order: 18, rarity: "rare", image: "../images/recipes/brainrot064.png" },
+{ id: 65, order: 19, rarity: "rare", image: "../images/recipes/brainrot065.png" },
+{ id: 66, order: 20, rarity: "rare", image: "../images/recipes/brainrot066.png" },
+{ id: 67, order: 21, rarity: "rare", image: "../images/recipes/brainrot067.png" },
+{ id: 68, order: 22, rarity: "rare", image: "../images/recipes/brainrot068.png" },
+{ id: 69, order: 23, rarity: "rare", image: "../images/recipes/brainrot069.png" },
+{ id: 70, order: 24, rarity: "rare", image: "../images/recipes/brainrot070.png" },
+{ id: 71, order: 25, rarity: "rare", image: "../images/recipes/brainrot071.png" },
+{ id: 72, order: 26, rarity: "rare", image: "../images/recipes/brainrot072.png" },
+{ id: 73, order: 27, rarity: "rare", image: "../images/recipes/brainrot073.png" },
+{ id: 74, order: 28, rarity: "rare", image: "../images/recipes/brainrot074.png" },
+{ id: 75, order: 29, rarity: "rare", image: "../images/recipes/brainrot075.png" },
+{ id: 76, order: 30, rarity: "rare", image: "../images/recipes/brainrot076.png" },
+{ id: 77, order: 31, rarity: "rare", image: "../images/recipes/brainrot077.png" },
+{ id: 78, order: 32, rarity: "rare", image: "../images/recipes/brainrot078.png" },
+{ id: 79, order: 33, rarity: "rare", image: "../images/recipes/brainrot079.png" },
+{ id: 80, order: 34, rarity: "rare", image: "../images/recipes/brainrot080.png" },
+{ id: 81, order: 35, rarity: "rare", image: "../images/recipes/brainrot081.png" },
+{ id: 82, order: 36, rarity: "rare", image: "../images/recipes/brainrot082.png" },
+{ id: 83, order: 37, rarity: "rare", image: "../images/recipes/brainrot083.png" },
+{ id: 84, order: 38, rarity: "rare", image: "../images/recipes/brainrot084.png" },
+{ id: 85, order: 39, rarity: "rare", image: "../images/recipes/brainrot085.png" },
+{ id: 86, order: 40, rarity: "rare", image: "../images/recipes/brainrot086.png" },
+{ id: 87, order: 41, rarity: "rare", image: "../images/recipes/brainrot087.png" },
+{ id: 88, order: 42, rarity: "rare", image: "../images/recipes/brainrot088.png" },
+{ id: 89, order: 43, rarity: "rare", image: "../images/recipes/brainrot089.png" },
+{ id: 90, order: 44, rarity: "rare", image: "../images/recipes/brainrot090.png" },
+{ id: 91, order: 45, rarity: "rare", image: "../images/recipes/brainrot091.png" },
+{ id: 92, order: 46, rarity: "rare", image: "../images/recipes/brainrot092.png" },
+{ id: 93, order: 47, rarity: "rare", image: "../images/recipes/brainrot093.png" },
+{ id: 94, order: 48, rarity: "rare", image: "../images/recipes/brainrot094.png" },
+{ id: 95, order: 49, rarity: "rare", image: "../images/recipes/brainrot095.png" },
+{ id: 96, order: 50, rarity: "rare", image: "../images/recipes/brainrot096.png" },
+
+
+/* ===== EPIC (097–145) ===== */
+{ id: 97, order: 1, rarity: "epic", image: "../images/recipes/brainrot097.png" },
+{ id: 98, order: 2, rarity: "epic", image: "../images/recipes/brainrot098.png" },
+{ id: 99, order: 3, rarity: "epic", image: "../images/recipes/brainrot099.png" },
+{ id: 100, order: 4, rarity: "epic", image: "../images/recipes/brainrot100.png" },
+{ id: 101, order: 5, rarity: "epic", image: "../images/recipes/brainrot101.png" },
+{ id: 102, order: 6, rarity: "epic", image: "../images/recipes/brainrot102.png" },
+{ id: 103, order: 7, rarity: "epic", image: "../images/recipes/brainrot103.png" },
+{ id: 104, order: 8, rarity: "epic", image: "../images/recipes/brainrot104.png" },
+{ id: 105, order: 9, rarity: "epic", image: "../images/recipes/brainrot105.png" },
+{ id: 106, order: 10, rarity: "epic", image: "../images/recipes/brainrot106.png" },
+{ id: 107, order: 11, rarity: "epic", image: "../images/recipes/brainrot107.png" },
+{ id: 108, order: 12, rarity: "epic", image: "../images/recipes/brainrot108.png" },
+{ id: 109, order: 13, rarity: "epic", image: "../images/recipes/brainrot109.png" },
+{ id: 212, order: 14, rarity: "epic", image: "../images/recipes/brainrot212.png" },
+{ id: 110, order: 15, rarity: "epic", image: "../images/recipes/brainrot110.png" },
+{ id: 111, order: 16, rarity: "epic", image: "../images/recipes/brainrot111.png" },
+{ id: 112, order: 17, rarity: "epic", image: "../images/recipes/brainrot112.png" },
+{ id: 113, order: 18, rarity: "epic", image: "../images/recipes/brainrot113.png" },
+{ id: 114, order: 19, rarity: "epic", image: "../images/recipes/brainrot114.png" },
+{ id: 115, order: 20, rarity: "epic", image: "../images/recipes/brainrot115.png" },
+{ id: 116, order: 21, rarity: "epic", image: "../images/recipes/brainrot116.png" },
+{ id: 117, order: 22, rarity: "epic", image: "../images/recipes/brainrot117.png" },
+{ id: 118, order: 23, rarity: "epic", image: "../images/recipes/brainrot118.png" },
+{ id: 119, order: 24, rarity: "epic", image: "../images/recipes/brainrot119.png" },
+{ id: 120, order: 25, rarity: "epic", image: "../images/recipes/brainrot120.png" },
+{ id: 121, order: 26, rarity: "epic", image: "../images/recipes/brainrot121.png" },
+{ id: 122, order: 27, rarity: "epic", image: "../images/recipes/brainrot122.png" },
+{ id: 123, order: 28, rarity: "epic", image: "../images/recipes/brainrot123.png" },
+{ id: 124, order: 29, rarity: "epic", image: "../images/recipes/brainrot124.png" },
+{ id: 125, order: 30, rarity: "epic", image: "../images/recipes/brainrot125.png" },
+{ id: 126, order: 31, rarity: "epic", image: "../images/recipes/brainrot126.png" },
+{ id: 127, order: 32, rarity: "epic", image: "../images/recipes/brainrot127.png" },
+{ id: 128, order: 33, rarity: "epic", image: "../images/recipes/brainrot128.png" },
+{ id: 129, order: 34, rarity: "epic", image: "../images/recipes/brainrot129.png" },
+{ id: 130, order: 35, rarity: "epic", image: "../images/recipes/brainrot130.png" },
+{ id: 131, order: 36, rarity: "epic", image: "../images/recipes/brainrot131.png" },
+{ id: 132, order: 37, rarity: "epic", image: "../images/recipes/brainrot132.png" },
+{ id: 133, order: 38, rarity: "epic", image: "../images/recipes/brainrot133.png" },
+{ id: 134, order: 39, rarity: "epic", image: "../images/recipes/brainrot134.png" },
+{ id: 135, order: 40, rarity: "epic", image: "../images/recipes/brainrot135.png" },
+{ id: 136, order: 41, rarity: "epic", image: "../images/recipes/brainrot136.png" },
+{ id: 137, order: 42, rarity: "epic", image: "../images/recipes/brainrot137.png" },
+{ id: 138, order: 43, rarity: "epic", image: "../images/recipes/brainrot138.png" },
+{ id: 139, order: 44, rarity: "epic", image: "../images/recipes/brainrot139.png" },
+{ id: 140, order: 45, rarity: "epic", image: "../images/recipes/brainrot140.png" },
+{ id: 141, order: 46, rarity: "epic", image: "../images/recipes/brainrot141.png" },
+{ id: 142, order: 47, rarity: "epic", image: "../images/recipes/brainrot142.png" },
+{ id: 143, order: 1, rarity: "epic", image: "../images/recipes/brainrot143.png" },
+{ id: 144, order: 2, rarity: "epic", image: "../images/recipes/brainrot144.png" },
+{ id: 145, order: 3, rarity: "epic", image: "../images/recipes/brainrot145.png" },
+
+/* ===== LEGENDARY (146–181) ===== */
+{ id: 146, order: 1, rarity: "legendary", image: "../images/recipes/brainrot146.png" },
+{ id: 147, order: 2, rarity: "legendary", image: "../images/recipes/brainrot147.png" },
+{ id: 148, order: 3, rarity: "legendary", image: "../images/recipes/brainrot148.png" },
+{ id: 149, order: 4, rarity: "legendary", image: "../images/recipes/brainrot149.png" },
+{ id: 150, order: 5, rarity: "legendary", image: "../images/recipes/brainrot150.png" },
+{ id: 151, order: 6, rarity: "legendary", image: "../images/recipes/brainrot151.png" },
+{ id: 152, order: 7, rarity: "legendary", image: "../images/recipes/brainrot152.png" },
+{ id: 153, order: 8, rarity: "legendary", image: "../images/recipes/brainrot153.png" },
+{ id: 154, order: 9, rarity: "legendary", image: "../images/recipes/brainrot154.png" },
+{ id: 213, order: 10, rarity: "legendary", image: "../images/recipes/brainrot213.png" },
+{ id: 155, order: 11, rarity: "legendary", image: "../images/recipes/brainrot155.png" },
+{ id: 156, order: 12, rarity: "legendary", image: "../images/recipes/brainrot156.png" },
+{ id: 157, order: 13, rarity: "legendary", image: "../images/recipes/brainrot157.png" },
+{ id: 158, order: 14, rarity: "legendary", image: "../images/recipes/brainrot158.png" },
+{ id: 159, order: 15, rarity: "legendary", image: "../images/recipes/brainrot159.png" },
+{ id: 160, order: 16, rarity: "legendary", image: "../images/recipes/brainrot160.png" },
+{ id: 161, order: 17, rarity: "legendary", image: "../images/recipes/brainrot161.png" },
+{ id: 162, order: 18, rarity: "legendary", image: "../images/recipes/brainrot162.png" },
+{ id: 214, order: 19, rarity: "legendary", image: "../images/recipes/brainrot214.png" },
+{ id: 163, order: 20, rarity: "legendary", image: "../images/recipes/brainrot163.png" },
+{ id: 164, order: 21, rarity: "legendary", image: "../images/recipes/brainrot164.png" },
+{ id: 165, order: 22, rarity: "legendary", image: "../images/recipes/brainrot165.png" },
+{ id: 166, order: 23, rarity: "legendary", image: "../images/recipes/brainrot166.png" },
+{ id: 167, order: 24, rarity: "legendary", image: "../images/recipes/brainrot167.png" },
+{ id: 168, order: 25, rarity: "legendary", image: "../images/recipes/brainrot168.png" },
+{ id: 169, order: 26, rarity: "legendary", image: "../images/recipes/brainrot169.png" },
+{ id: 170, order: 27, rarity: "legendary", image: "../images/recipes/brainrot170.png" },
+{ id: 171, order: 28, rarity: "legendary", image: "../images/recipes/brainrot171.png" },
+{ id: 172, order: 29, rarity: "legendary", image: "../images/recipes/brainrot172.png" },
+{ id: 173, order: 30, rarity: "legendary", image: "../images/recipes/brainrot173.png" },
+{ id: 174, order: 31, rarity: "legendary", image: "../images/recipes/brainrot174.png" },
+{ id: 175, order: 32, rarity: "legendary", image: "../images/recipes/brainrot175.png" },
+{ id: 176, order: 33, rarity: "legendary", image: "../images/recipes/brainrot176.png" },
+{ id: 177, order: 34, rarity: "legendary", image: "../images/recipes/brainrot177.png" },
+{ id: 178, order: 35, rarity: "legendary", image: "../images/recipes/brainrot178.png" },
+{ id: 179, order: 36, rarity: "legendary", image: "../images/recipes/brainrot179.png" },
+{ id: 180, order: 37, rarity: "legendary", image: "../images/recipes/brainrot180.png" },
+{ id: 181, order: 38, rarity: "legendary", image: "../images/recipes/brainrot181.png" },
+{ id: 182, order: 39, rarity: "legendary", image: "../images/recipes/brainrot182.png" },
+{ id: 183, order: 40, rarity: "legendary", image: "../images/recipes/brainrot183.png" },
+
+/* ===== MYTHIC (184–205 except 199) ===== */
+{ id: 184, order: 1, rarity: "mythic", image: "../images/recipes/brainrot184.png" },
+{ id: 185, order: 2, rarity: "mythic", image: "../images/recipes/brainrot185.png" },
+{ id: 186, order: 3, rarity: "mythic", image: "../images/recipes/brainrot186.png" },
+{ id: 187, order: 4, rarity: "mythic", image: "../images/recipes/brainrot187.png" },
+{ id: 215, order: 5, rarity: "mythic", image: "../images/recipes/brainrot215.png" },
+{ id: 188, order: 6, rarity: "mythic", image: "../images/recipes/brainrot188.png" },
+{ id: 189, order: 7, rarity: "mythic", image: "../images/recipes/brainrot189.png" },
+{ id: 216, order: 8, rarity: "mythic", image: "../images/recipes/brainrot216.png" },
+{ id: 190, order: 9, rarity: "mythic", image: "../images/recipes/brainrot190.png" },
+{ id: 191, order: 10, rarity: "mythic", image: "../images/recipes/brainrot191.png" },
+{ id: 192, order: 11, rarity: "mythic", image: "../images/recipes/brainrot192.png" },
+{ id: 193, order: 12, rarity: "mythic", image: "../images/recipes/brainrot193.png" },
+{ id: 194, order: 13, rarity: "mythic", image: "../images/recipes/brainrot194.png" },
+{ id: 195, order: 14, rarity: "mythic", image: "../images/recipes/brainrot195.png" },
+{ id: 217, order: 15, rarity: "mythic", image: "../images/recipes/brainrot217.png" },
+{ id: 196, order: 16, rarity: "mythic", image: "../images/recipes/brainrot196.png" },
+{ id: 197, order: 17, rarity: "mythic", image: "../images/recipes/brainrot197.png" },
+{ id: 198, order: 18, rarity: "mythic", image: "../images/recipes/brainrot198.png" },
+{ id: 200, order: 19, rarity: "mythic", image: "../images/recipes/brainrot200.png" },
+{ id: 201, order: 20, rarity: "mythic", image: "../images/recipes/brainrot201.png" },
+{ id: 202, order: 21, rarity: "mythic", image: "../images/recipes/brainrot202.png" },
+{ id: 203, order: 22, rarity: "mythic", image: "../images/recipes/brainrot203.png" },
+{ id: 204, order: 23, rarity: "mythic", image: "../images/recipes/brainrot204.png" },
+{ id: 205, order: 24, rarity: "mythic", image: "../images/recipes/brainrot205.png" },
+
+/* ===== SECRET ===== */
+{ id: 199, order: 1, rarity: "secret", image: "../images/recipes/brainrot199.png" },
+{ id: 206, order: 2, rarity: "secret", image: "../images/recipes/brainrot206.png" },
+{ id: 207, order: 3, rarity: "secret", image: "../images/recipes/brainrot207.png" },
+{ id: 218, order: 4, rarity: "secret", image: "../images/recipes/brainrot218.png" },
+{ id: 208, order: 5, rarity: "secret", image: "../images/recipes/brainrot208.png" }
+
+];
+
+
+brainrots.forEach(r => {
   const container = document.querySelector(`#${r.rarity} .grid`);
-  if(!container) return;
+  if (!container) return;
 
   const card = document.createElement("div");
   card.className = "card";
 
   const img = document.createElement("img");
   img.src = r.image;
-  img.onerror = ()=>img.src="../images/placeholder.png";
+  img.onerror = () => img.src = "../images/placeholder.png";
   card.appendChild(img);
 
   const rarityDiv = document.createElement("div");
-  rarityDiv.className=`rarity ${r.rarity}`;
-  rarityDiv.textContent=r.rarity;
+  rarityDiv.className = `rarity ${r.rarity}`;
+  rarityDiv.textContent = r.rarity;
   card.appendChild(rarityDiv);
 
   container.appendChild(card);

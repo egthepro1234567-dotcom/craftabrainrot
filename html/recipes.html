@@ -9,7 +9,6 @@
 
 <div class="container">
 
-  <!-- Sidebar Buttons (fixed & centered) -->
   <aside class="sidebar">
     <button class="back" onclick="window.location.href='../index.html'">
       ← Back to Main
@@ -24,7 +23,6 @@
     <button class="secret" onclick="scrollToRarity('secret')">Secret</button>
   </aside>
 
-  <!-- Main content -->
   <main>
     <section id="uncommon">
       <h2>Uncommon</h2>
@@ -64,12 +62,11 @@
 
 </div>
 
-<!-- JS -->
 <script src="../js/recipes.js"></script>
 <script>
 function scrollToRarity(rarity) {
   const section = document.getElementById(rarity);
-  if(section) {
+  if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 }

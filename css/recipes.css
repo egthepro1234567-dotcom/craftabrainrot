@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: rgba(25, 26, 25, 0.8); /* slightly darker */
+  background: rgba(25, 26, 25, 0.8);
   color: white;
   min-height: 100vh;
 }
@@ -15,10 +15,9 @@ body {
   display: flex;
 }
 
-/* Sidebar: fixed and vertically centered */
 .sidebar {
   position: fixed;
-  top: 50%;                    
+  top: 50%;
   left: 20px;
   transform: translateY(-50%);
   display: flex;
@@ -31,7 +30,6 @@ body {
   align-items: center;
 }
 
-/* Sidebar buttons */
 .sidebar button {
   border: none;
   padding: 12px 20px;
@@ -51,7 +49,6 @@ body {
   background: rgba(70, 70, 70, 0.85);
 }
 
-/* Back button styling (if included) */
 .sidebar .back {
   background: #444;
   margin-bottom: 10px;
@@ -61,14 +58,12 @@ body {
   background: #555;
 }
 
-/* Main content */
 main {
   flex: 1;
   padding: 20px 40px;
-  margin-left: 180px; /* space for sidebar */
+  margin-left: 180px;
 }
 
-/* Sections */
 section {
   margin-bottom: 60px;
 }
@@ -76,17 +71,15 @@ section {
 section h2 {
   font-size: 1.6em;
   margin-bottom: 15px;
-  text-align: center; 
+  text-align: center;
 }
 
-/* Grid for recipes */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
 }
 
-/* Recipe card */
 .card {
   background: rgba(30, 30, 30, 0.85);
   border-radius: 12px;
@@ -120,7 +113,6 @@ section h2 {
   text-align: center;
 }
 
-/* Rarity colors */
 .uncommon { background: #95a5a6; }
 .common { background: #2ecc71; }
 .rare { background: #3498db; }
@@ -128,7 +120,6 @@ section h2 {
 .legendary { background: #f1c40f; color: #000; }
 .mythic { background: #e74c3c; }
 
-/* Secret with rounded black background */
 .secret {
   background: black;
   color: white;
@@ -138,7 +129,6 @@ section h2 {
   display: inline-block;
 }
 
-/* Responsive adjustments */
 @media (max-width: 800px) {
   .container {
     flex-direction: column;

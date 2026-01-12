@@ -8,7 +8,7 @@ window.addEventListener("resize", () => {
   canvas.height = window.innerHeight;
 });
 
-// Shape class (same as before)
+
 class Shape {
   constructor() {
     this.reset();
@@ -45,30 +45,28 @@ class Shape {
   }
 }
 
-// Create fewer shapes for subtle effect
 const shapes = [];
 for (let i = 0; i < 40; i++) shapes.push(new Shape());
 
-// Ultra slow background fade: 20 → 50 → 20 in 5 minutes (300 sec)
-let bgShade = 20;  // start very dark gray
+
+let bgShade = 20; 
 let bgDir = 1;
 
-// Calculate how much to change per frame (~60fps)
+
 const minShade = 20;
 const maxShade = 50;
-const cycleTime = 300; // seconds per full cycle
-const fps = 60; // approximate
-const deltaShade = ((maxShade - minShade) * 2) / (cycleTime * fps); // 2x because forward+back
-
+const cycleTime = 300; 
+const fps = 60; 
+const deltaShade = ((maxShade - minShade) * 2) / (cycleTime * fps); 
 function animate() {
-  // Smoothly change background
+
   bgShade += deltaShade * bgDir;
   if (bgShade >= maxShade || bgShade <= minShade) bgDir *= -1;
 
   ctx.fillStyle = `rgb(${bgShade},${bgShade},${bgShade})`;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Draw shapes
+
   shapes.forEach(s => {
     s.update();
     s.draw();
