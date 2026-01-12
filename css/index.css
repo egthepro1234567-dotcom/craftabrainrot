@@ -111,3 +111,26 @@ html, body {
   100% { transform: rotate(20deg) scale(1); }
 }
 
+/* Version Label */
+
+.version-label {
+  position: fixed;        
+  bottom: 10px;           
+  right: 10px;            
+  font-size: 0.8em;       
+  color: rgba(255, 255, 255, 0.7); 
+  background: rgba(0, 0, 0, 0.4);  
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  pointer-events: none;  
+  user-select: none;     
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.version-label:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
